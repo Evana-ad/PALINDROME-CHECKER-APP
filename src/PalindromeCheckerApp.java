@@ -1,9 +1,6 @@
 import java.util.Scanner;
 public class PalindromeCheckerApp {
 
-  import java.util.Scanner;
-
-    public class UseCase4PalindromeCheckerApp {
 
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
@@ -40,8 +37,3 @@ public class PalindromeCheckerApp {
             scanner.close();
         }
     }
-
-
-
-    }
-}
