@@ -375,7 +375,7 @@ public class PalindromeCheckerApp {
         System.out.println("Deque Method Result : " + result3 + " | Time: " + dequeTime + " ns");
 
         System.out.println("====================================");
->>>>>>> origin/feature/UC13
+
 
 
         System.out.println("====================================");
