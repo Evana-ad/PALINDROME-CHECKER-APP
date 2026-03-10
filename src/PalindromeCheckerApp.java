@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 
 
@@ -7,10 +7,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.Scanner;
-<<<<<<< HEAD
+
 import java.util.Stack;
 
-=======
+
 import java.util.*;
 
 public class PalindromeCheckerApp {
@@ -48,13 +48,13 @@ public class PalindromeCheckerApp {
     }
 
     public static void main(String[] args) {
->>>>>>> origin/feature/UC13
+
 
 class PalindromeChecker {
 
-<<<<<<< HEAD
+
     public boolean checkPalindrome(String input) {
-=======
+
         System.out.println("====================================");
         System.out.println(" PALINDROME CHECKER APP - UC13");
         System.out.println(" Performance Comparison");
@@ -62,11 +62,11 @@ class PalindromeChecker {
 
         System.out.print("Enter a string to check: ");
         String input = scanner.nextLine();
->>>>>>> origin/feature/UC13
+
 
         long startTime, endTime;
 
-<<<<<<< HEAD
+
         for (int i = input.length() - 1; i >= 0; i--) {
             reversed += input.charAt(i);
         }
@@ -353,7 +353,7 @@ public class PalindromeCheckerApp {
         } else {
             System.out.println("Result: It is NOT a Palindrome.");
         }
-=======
+
         startTime = System.nanoTime();
         boolean result1 = arrayMethod(input);
         endTime = System.nanoTime();
