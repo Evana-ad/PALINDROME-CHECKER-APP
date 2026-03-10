@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -9,13 +10,63 @@ import java.util.Scanner;
 <<<<<<< HEAD
 import java.util.Stack;
 
+=======
+import java.util.*;
+
+public class PalindromeCheckerApp {
+
+    public static boolean arrayMethod(String input) {
+        char[] arr = input.toCharArray();
+        int start = 0, end = arr.length - 1;
+        while (start < end) {
+            if (arr[start] != arr[end])
+                return false;
+            start++;
+            end--;
+        }
+        return true;
+    }
+
+    public static boolean stackMethod(String input) {
+        Stack<Character> stack = new Stack<>();
+        for (char c : input.toCharArray())
+            stack.push(c);
+        for (char c : input.toCharArray())
+            if (c != stack.pop())
+                return false;
+        return true;
+    }
+
+    public static boolean dequeMethod(String input) {
+        Deque<Character> deque = new ArrayDeque<>();
+        for (char c : input.toCharArray())
+            deque.addLast(c);
+        while (deque.size() > 1)
+            if (deque.removeFirst() != deque.removeLast())
+                return false;
+        return true;
+    }
+
+    public static void main(String[] args) {
+>>>>>>> origin/feature/UC13
 
 class PalindromeChecker {
 
+<<<<<<< HEAD
     public boolean checkPalindrome(String input) {
+=======
+        System.out.println("====================================");
+        System.out.println(" PALINDROME CHECKER APP - UC13");
+        System.out.println(" Performance Comparison");
+        System.out.println("====================================");
 
-        String reversed = "";
+        System.out.print("Enter a string to check: ");
+        String input = scanner.nextLine();
+>>>>>>> origin/feature/UC13
 
+        long startTime, endTime;
+
+<<<<<<< HEAD
         for (int i = input.length() - 1; i >= 0; i--) {
             reversed += input.charAt(i);
         }
@@ -302,6 +353,29 @@ public class PalindromeCheckerApp {
         } else {
             System.out.println("Result: It is NOT a Palindrome.");
         }
+=======
+        startTime = System.nanoTime();
+        boolean result1 = arrayMethod(input);
+        endTime = System.nanoTime();
+        long arrayTime = endTime - startTime;
+
+        startTime = System.nanoTime();
+        boolean result2 = stackMethod(input);
+        endTime = System.nanoTime();
+        long stackTime = endTime - startTime;
+
+        startTime = System.nanoTime();
+        boolean result3 = dequeMethod(input);
+        endTime = System.nanoTime();
+        long dequeTime = endTime - startTime;
+
+        System.out.println("\nResults:");
+        System.out.println("Array Method Result : " + result1 + " | Time: " + arrayTime + " ns");
+        System.out.println("Stack Method Result : " + result2 + " | Time: " + stackTime + " ns");
+        System.out.println("Deque Method Result : " + result3 + " | Time: " + dequeTime + " ns");
+
+        System.out.println("====================================");
+>>>>>>> origin/feature/UC13
 
 
         System.out.println("====================================");
@@ -309,8 +383,6 @@ public class PalindromeCheckerApp {
 
         System.out.println("====================================");
         scanner.close();
-
-
     }
 
     }
