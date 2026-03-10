@@ -3,7 +3,25 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 import java.util.Scanner;
+<<<<<<< HEAD
 import java.util.Stack;
+=======
+
+class PalindromeChecker {
+
+    public boolean checkPalindrome(String input) {
+
+        String reversed = "";
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reversed += input.charAt(i);
+        }
+
+        return input.equals(reversed);
+    }
+}
+
+>>>>>>> origin/feature/UC11
 public class PalindromeCheckerApp {
     static class Node {
         char data;
@@ -225,6 +243,7 @@ public class PalindromeCheckerApp {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+<<<<<<< HEAD
         System.out.println("====================================");
 
         System.out.println("  PALINDROME CHECKER APP - UC9");
@@ -265,12 +284,29 @@ public class PalindromeCheckerApp {
             System.out.println("\"" + input + "\" is a palindrome (ignoring spaces and case).");
         else
             System.out.println("\"" + input + "\" is NOT a palindrome (ignoring spaces and case).");
+=======
+        System.out.println("=== UC11: Object-Oriented Palindrome Service ===");
+
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        PalindromeChecker checker = new PalindromeChecker();
+
+        boolean result = checker.checkPalindrome(input);
+
+        if (result) {
+            System.out.println("Result: It is a Palindrome.");
+        } else {
+            System.out.println("Result: It is NOT a Palindrome.");
+        }
+>>>>>>> origin/feature/UC11
 
         System.out.println("====================================");
 
 
         System.out.println("====================================");
         scanner.close();
+<<<<<<< HEAD
 
     }
 
@@ -287,3 +323,7 @@ public class PalindromeCheckerApp {
 
 
 
+=======
+    }
+}
+>>>>>>> origin/feature/UC11
