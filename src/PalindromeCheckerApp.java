@@ -17,7 +17,6 @@ public class PalindromeCheckerApp {
 
 
 
-<<<<<<< HEAD
 
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
@@ -77,7 +76,6 @@ public class PalindromeCheckerApp {
     }
 
 
-<<<<<<< HEAD
 
         public static void main(String[] args) {
 
@@ -166,7 +164,7 @@ public class PalindromeCheckerApp {
 
 
 
-=======
+
         System.out.println("====================================");
         System.out.println("  PALINDROME CHECKER APP - UC8");
         System.out.println("====================================");
@@ -223,16 +221,21 @@ public class PalindromeCheckerApp {
         } else {
             System.out.println("\"" + input + "\" is NOT a palindrome.");
         }
-=======
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("====================================");
+
         System.out.println("  PALINDROME CHECKER APP - UC9");
+
+        System.out.println("  PALINDROME CHECKER APP - UC10");
+
         System.out.println("====================================");
 
         System.out.print("Enter a string to check: ");
         String input = scanner.nextLine();
+
 
         boolean result = isPalindrome(input, 0, input.length() - 1);
 
@@ -242,19 +245,45 @@ public class PalindromeCheckerApp {
             System.out.println("\"" + input + "\" is NOT a palindrome.");
 
         System.out.println("====================================");
->>>>>>> origin/feature/UC9
+
+        String normalized = input.replaceAll("\\s+", "").toLowerCase();
+
+        int start = 0;
+        int end = normalized.length() - 1;
+        boolean isPalindrome = true;
+
+        while (start < end) {
+            if (normalized.charAt(start) != normalized.charAt(end)) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+
+        if (isPalindrome)
+            System.out.println("\"" + input + "\" is a palindrome (ignoring spaces and case).");
+        else
+            System.out.println("\"" + input + "\" is NOT a palindrome (ignoring spaces and case).");
+
+        System.out.println("====================================");
+
 
         System.out.println("====================================");
         scanner.close();
-<<<<<<< HEAD
->>>>>>> origin/feature/UC8
+
     }
 
     }
-=======
+
     }
 }
 
 
 
->>>>>>> origin/feature/UC9
+
+    }
+}
+
+
+
